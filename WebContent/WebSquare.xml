@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare"
+	xmlns:xf="http://www.w3.org/2002/xforms">
+	<head>
+		<w2:type>DEFAULT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+		</xf:model>
+		<script type="text/javascript" lazy="false"><![CDATA[
+	//	window.addEventListener("beforeunload", function(event) {
+	//
+	//		event.returnValue = "진짜 나감?";
+	//
+	//	});00
+
+	window.onbeforeunload = function() {
+		debugger;
+		if (self.screenTop > 9000) {
+			// 브라우저 닫힘
+		} else if (document.readyState == "complete") {
+			// 새로고침
+		} else if (document.readyState == "loading") {
+			// 다른 사이트로 이동
+		}
+	}
+
+	scwin.onpageload = function() {
+
+	};
+
+	scwin.onpageunload = function() {
+		debugger;
+		opener.console.log("[popup] close / id=" + $w.getPopupId(this));
+	};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+		<w2:textbox label="test~~~" style="position:absolute; top:36px; left:67px; width:244px; height:96px; " id=""></w2:textbox>
+	</body>
+</html>

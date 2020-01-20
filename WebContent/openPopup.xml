@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+        </xf:model>
+         <script type="text/javascript" lazy="false"><![CDATA[
+
+	window.onbeforeunload = function() {
+		$w.closePopup("popup_window");
+		
+	}
+	scwin.onpageload = function() {
+
+	};
+
+	scwin.onpageunload = function() {
+
+	};
+
+	scwin.trigger1_onclick = function(e) {
+		requires("uiplugin.popup");
+
+		var opts = {
+			"id" : "popup_window",
+			"type" : "browserPopup",
+			"width" : 500 + "px",
+			"height" : 300 + "px",
+			"top" : 250,
+			"left" : 250,
+			"popupName" : "윈도우 팝업[window type]",
+			"modal" : false,
+			"useModalStack" : false,
+			"useIFrame" : false,
+			"style" : "",
+			"srcData" : "",
+			"destData" : "",
+			"dataObject" : "",
+			"xml" : "",
+			"resizable" : false,
+			"status" : false,
+			"menubar" : false,
+			"scrollbars" : false,
+			"title" : "focusTest",
+			"useMaximize" : false,
+			"closeAction" : "",
+			"className" : "",
+			"fullscreen" : false,
+			"useControl" : false,
+			"alwaysOnTop" : false,
+			"frameMode" : ""
+
+		};
+
+		$w.openPopup("WebSquare.xml", opts);
+	};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+
+    	<xf:trigger type="button" style="position:absolute; top:34px; left:36px; width:268px; height:92px; " id="trigger1" ev:onclick="scwin.trigger1_onclick">
+    		<xf:label><![CDATA[openPopup]]></xf:label>
+    	</xf:trigger>
+    </body>
+</html>
